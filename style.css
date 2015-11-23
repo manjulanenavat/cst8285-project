@@ -23,18 +23,22 @@
 	
 }
 
+#tabheader {
+	text-align:right;
+}
+
 #Images{
 	height:250px;
 	text-align:center;
 	
 }
 
-#paragraph1 {
+#text1 {
 	text-align:left;
 	font-size:medium;
 	font-style:normal;
 }
-#paragraph2 {
+#text2 {
 	text-align:left;
 	font-size:medium;
 	font-style:normal;
