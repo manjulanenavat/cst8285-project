@@ -4,8 +4,9 @@
 </head>
 
 <body>
-<div>
-
+<div id="content-home-page">
+	<div id="image-division"></div>
+	<div id="text-division"></div>
 </div>
 </body>
 
