@@ -1,0 +1,71 @@
+@CHARSET "ISO-8859-1";
+
+#Mainpage{
+	height:auto;
+	width:1000px;
+}
+
+#header {
+	height:50px;
+	width:1000px;
+	text-align:center;
+}
+
+#navigation {
+	height:500px;
+	width:200px;
+	float:left;
+}
+
+#content {
+	width:800px;
+	height:500px;
+	
+}
+
+#Images{
+	height:250px;
+	text-align:center;
+	
+}
+
+#paragraph1 {
+	text-align:left;
+	font-size:medium;
+	font-style:normal;
+}
+#paragraph2 {
+	text-align:left;
+	font-size:medium;
+	font-style:normal;
+}
+
+#contenttable {
+	width:500px;
+	height:auto;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+
+#tablebody {
+	width:500px;
+	height:auto;
+}
+
+#tablebodyleft {
+	width:120px;
+}
+#btn {
+	text-align:center;
+}
+
+
+#footer {
+	text-align:center;
+	font-size:small;
+	height:30px;
+	width:1000px;
+	padding-top:10px;
+	font-style:normal;
+}
