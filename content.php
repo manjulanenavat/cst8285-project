@@ -1,4 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
 </head>
@@ -6,14 +5,18 @@
 <body>
 <div id="content-home-page">
 	<div id="tabheader" align="right">
+	<form id="login" action="login.php" method="POST">
 		username:<input name="username">
 		password:<input name="password">
+		<input type="submit" value="login">
+	</form>
 	</div>
 	<div id="image-division">
-		<img src="images/queen.jpg" alt=""></img>
+		<img src="images/queen.jpg" alt="">
 	</div>
 	<div id="text-division"></div>
 </div>
 </body>
 
 </html>
+ 
