@@ -3,20 +3,30 @@
 
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
+$db_uname = "root";
+$db_passwd = "";
 $dbname = "project";
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $db_uname, $db_passwd, $dbname);
+
 // Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "INSERT INTO users (Username, Password)
-VALUES 
-('$_POST[username]','$_POST[password]')";
+// Read posted form values into local variables.
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+//Sql query to insert username and password into database.
+$sql = "INSERT INTO users (Username, Password) VALUES ('$username', '$password')";
+
+//debug statements
+echo $username;
+echo "<br>";
+echo $password;
+echo "<br>";
 
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
@@ -25,6 +35,7 @@ if (mysqli_query($conn, $sql)) {
 }
 
 mysqli_close($conn);
+
 ?>
 </body>
 </html>

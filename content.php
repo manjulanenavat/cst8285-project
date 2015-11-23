@@ -5,7 +5,13 @@
 
 <body>
 <div id="content-home-page">
-	<div id="image-division"></div>
+	<div id="tabheader" align="right">
+		username:<input name="username">
+		password:<input name="password">
+	</div>
+	<div id="image-division">
+		<img src="images/queen.jpg" alt=""></img>
+	</div>
 	<div id="text-division"></div>
 </div>
 </body>

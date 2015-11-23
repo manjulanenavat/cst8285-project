@@ -1,9 +1,9 @@
 <ul>
-<li><a href="http://localhost:8080/index.php">Home</a></li>
+<li><a href="index.php">Home</a></li>
 </ul>
-	
+
 <ul>
-<li><a href="http://localhost:8080/greetings.php">Greetings</a></li>
+<li><a href="greetings.php">Greetings</a></li>
 </ul>
 	
 
