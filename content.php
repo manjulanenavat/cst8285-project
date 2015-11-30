@@ -6,12 +6,7 @@
 
 <body>
 <div id="content-home-page">
-	<div id="tabheader" align="right">
-	<form id="login" action="login.php" method="POST">
-		username:<input name="username">
-		password:<input name="password">
-		<input type="submit" value="login">
-	</form>
+	<div id="tabheader">
 	</div>
 	<div id="Images">
 		<img src="images/queen.jpg" alt="">

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,11 +9,9 @@
 
 function validateForm()
 {
-	var name = document.forms["myform"]["Name"].value;
-	  
-  	var location = document.forms["myform"]["Location"].value;
-	  		
-  	var message=document.forms["myform"]["Message"].value;
+		alert("tttt");	
+  	var message=document.forms["myform"]["message"].value;
+  	
 	if (message==null || message=="")
 	 	{
   		alert("Mandatory");
@@ -31,22 +30,22 @@ function validateForm()
 <div id="content">
 <form name="myform" action="insert-greetings.php" method="post" onsubmit="return validateForm()">
 
-	<table id="contenttable">
+ 	<table id="contenttable">
 	<tbody id="tablebody">
 		<tr>
 			<td id="tablebodyleft">Name</td>
 			<td id="tablebodyright">
-			<input type="text" name="Name" style="width: 251px"></td>
+			<input type="text" name="name" style="width: 251px"></td>
 		</tr>
 		<tr>
 			<td id="tablebodyleft">Location(City/Province)</td>
 			<td id="tablebodyright">
-			<input type="text" name="Location(City/Province)" style="width: 251px"></td>
+			<input type="text" name="location" style="width: 251px"></td>
 		</tr>
 		<tr>
 			<td id="tablebodyleft">Message * </td>
 			<td id="tablebodyright">
-			<textarea rows="5" cols="45"> </textarea>
+			<textarea rows="5" cols="45" name="message"> </textarea>
 			</td>
 		</tr>
 	
@@ -56,6 +55,7 @@ function validateForm()
 		</tbody>
 	</table>
 </form>
+
 
 </div>
 <div id="footer"><?php include("footer.php"); ?></div>

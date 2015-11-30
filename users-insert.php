@@ -20,7 +20,7 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 //Sql query to insert username and password into database.
-$sql = "INSERT INTO users (Username, Password) VALUES ('$username', '$password')";
+$sql = "INSERT INTO users (Username, Password) VALUES (" . $username . ", " . $password . ")";
 
 //debug statements
 echo $username;

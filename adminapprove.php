@@ -1,7 +1,15 @@
-<html>
-<body>
-
 <?php
+
+if (isset($_GET['id'])) {
+	$id  = $_GET['id'];
+	echo $id;
+}
+
+if (isset($_GET['status'])) {
+	$status = $_GET['status'];
+	echo $status;
+}
+
 $servername = "localhost";
 $db_uname = "root";
 $db_passwd = "";
@@ -16,39 +24,19 @@ if (!$conn) {
 }
 
 // Read posted form values into local variables.
-$name = $_POST['name'];
-$location = $_POST['location'];
-$message = $_POST['message'];
+$query = "UPDATE messages SET status='$status' WHERE id='$id'";
 
-$query = "INSERT INTO messages (name, location, message, status) 
-VALUES ('$name', '$location', '$message', 'P')";
-
-
-
-//debug statements
-echo $name;
-echo "<br>";
-echo $location;
-echo "<br>";
-echo $message;
-echo "<br>";
 echo $query;
-echo "<br>";
-
-
-
 
 $result = mysqli_query($conn, $query);
 echo $result;
 
 if ($result) {
-	header('Location: index.php');
+	header('Location: admin.php?success=1');
 } else {
-   header('Location: greetings.php?failed=1');
+	header('Location: admin.php?success=0');
 }
 
 mysqli_close($conn);
 
 ?>
-</body>
-</html>

@@ -52,6 +52,12 @@
 	text-align: left;
 }
 
+.error {	
+	text-decoration:underline;
+	color:red;
+	text-align:center;
+	font-variant:normal;background-color:red;
+}
 #tablebody {
 	width:500px;
 	height:auto;
