@@ -1,3 +1,18 @@
+<?php
+
+$dbname = 'project';  // your database name.
+$con = mysqli_connect("localhost","root","", $dbname);
+
+if (!$con)
+  {
+  die('Could not connect: ' . mysqli_connect_error());
+  }
+
+
+$result = mysqli_query($con, "SELECT * FROM messages where status = 'A'");
+
+mysqli_close($con);
+?>
 
 <!DOCTYPE html>
 <html>
@@ -21,6 +36,7 @@ function validateForm()
 </script>
 </head>
 <body> 
+
 <div id="header">
 <?php include("header.php"); ?>
 </div>
@@ -55,6 +71,28 @@ function validateForm()
 		</tbody>
 	</table>
 </form>
+<?php
+
+
+echo " <br><br><br><br>
+
+<table border='1'>
+<tr>
+<th>Name</th>
+<th>Location</th>
+<th>Messages</th>
+</tr>";
+
+while($row = mysqli_fetch_array($result)) {
+  echo "<tr>";
+  echo "<td>" . $row['name'] . "</td>";
+  echo "<td>" . $row['location'] . "</td>";
+  echo "<td>" .  $row['message'] . "</td>";
+  
+ }
+echo "</table>";
+
+?>
 
 
 </div>

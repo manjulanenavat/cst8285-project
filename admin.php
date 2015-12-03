@@ -1,10 +1,14 @@
 
-<html>
-<body>
-
 <?php
+session_start();
 
+
+if (!isset($_SESSION['admin'])) {
+	header('Location: login.php?failed=1');
+}
 $error = "";
+
+   
 if (isset($_GET['status'])) {
 	$status = $_GET['status'];
 	if ($status) {
@@ -27,9 +31,6 @@ $result = mysqli_query($con, "SELECT * FROM messages where status = 'P'");
 mysqli_close($con);
 ?>
 
-
-</body>
-</html>
 <!DOCTYPE html>
 <html>
 <head>

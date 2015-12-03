@@ -1,6 +1,3 @@
-<html>
-<body>
-
 
 <?php
 $servername = "localhost";
@@ -19,14 +16,17 @@ if (!$conn) {
 // Read posted form values into local variables.
 $username = $_POST["username"];
 $password = $_POST["password"];
+
 $query = "SELECT * FROM users WHERE username = '$username' and password = '$password'";
 
-//Sql query to insert username and password into database._
-$result = mysqli_query($conn, $query );
+$result = mysqli_query($conn, $query);
 
 if ($result && mysqli_num_rows($result) == 1) {
+	session_start();
+    $_SESSION['admin'] = 1; 
 	header('Location: admin.php');
 } else {
+	session_stop();
    header('Location: login.php?failed=1');
 }
 
@@ -35,5 +35,3 @@ mysqli_close($conn);
 ?>
 
 
-</body>
-</html>
